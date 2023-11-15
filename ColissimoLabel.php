@@ -94,6 +94,8 @@ class ColissimoLabel extends BaseModule
 
     const CONFIG_KEY_FROM_PHONE = 'colissimolabel-from-phone';
 
+    const REQUEST_DELAY ='colissimolabel-request-delay';
+
     /**
      * @param ConnectionInterface|null $con
      */
@@ -304,6 +306,11 @@ class ColissimoLabel extends BaseModule
             );
         }
         /* Sender address values check end here */
+
+        /* Add a delay for the ajax request  */
+        if (null === self::getConfigValue(self::REQUEST_DELAY)) {
+            self::setConfigValue(self::REQUEST_DELAY, 0000);
+        }
     }
 
     /**

@@ -150,6 +150,20 @@
                                             </div>
                                         </div>
 
+                                        <!-- More Options -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <div class="panel-title">{intl d='colissimolabel.bo.default' l="More Option"}</div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        {render_form_field field="colissimolabel-request-delay" value={$value}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <button type="submit" name="save_mode" value="stay" class="form-submit-button btn btn-sm btn-default btn-success" title="{intl l='Save changes' d='colissimolabel.bo.default'}">{intl l='Save changes' d='colissimolabel.bo.default'} <span class="glyphicon glyphicon-ok"></span></button>
                                     </form>
                                     {/form}

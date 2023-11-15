@@ -56,6 +56,8 @@ class ConfigurationController extends AdminController
             ColissimoLabel::setConfigValue(ColissimoLabel::CONFIG_KEY_FROM_COUNTRY, $vform->get(ColissimoLabel::CONFIG_KEY_FROM_COUNTRY)->getData());
             ColissimoLabel::setConfigValue(ColissimoLabel::CONFIG_KEY_FROM_CONTACT_EMAIL, $vform->get(ColissimoLabel::CONFIG_KEY_FROM_CONTACT_EMAIL)->getData());
             ColissimoLabel::setConfigValue(ColissimoLabel::CONFIG_KEY_FROM_PHONE, $vform->get(ColissimoLabel::CONFIG_KEY_FROM_PHONE)->getData());
+
+            ColissimoLabel::setConfigValue(ColissimoLabel::REQUEST_DELAY, $vform->get(ColissimoLabel::REQUEST_DELAY)->getData());
             if (' ' === $vform->get(ColissimoLabel::CONFIG_KEY_FROM_ADDRESS_2)->getData()) {
                 ColissimoLabel::setConfigValue(ColissimoLabel::CONFIG_KEY_FROM_ADDRESS_2, null);
             }

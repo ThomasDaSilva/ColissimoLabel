@@ -195,6 +195,14 @@ class ConfigureColissimoLabel extends BaseForm
                     'data' => ColissimoLabel::getConfigValue(ColissimoLabel::CONFIG_KEY_FROM_PHONE),
                     'label' => $this->translator->trans('Téléphone', [], ColissimoLabel::DOMAIN_NAME),
                 ]
+            )->add(
+                ColissimoLabel::REQUEST_DELAY,
+                TextType::class,
+                [
+                    'constraints' => [new NotBlank()],
+                    'data' => ColissimoLabel::getConfigValue(ColissimoLabel::REQUEST_DELAY),
+                    'label' => $this->translator->trans('Ajax Request Delay', [], ColissimoLabel::DOMAIN_NAME),
+                ]
             )
         ;
     }
